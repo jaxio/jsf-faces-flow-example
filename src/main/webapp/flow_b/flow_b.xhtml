@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <head>
+        <title>Default start page in flow_b</title>
+    </head>
+    <body>
+    <h:form>
+        <h2>Default start page in flow_b</h2>
+        <p>Flow bean message: #{beanForFlowB.helloMessage}</p>
+        <p>Has a flow: #{null != facesContext.application.flowHandler.currentFlow}.</p> 
+        <p>current flow id: #{facesContext.application.flowHandler.currentFlow.id}.</p>        
+                       
+        <p>param1 = #{flowScope.param1Value}</p>
+        <p>param2 = #{flowScope.param2Value}</p>
+        
+        <p><h:commandButton value="next" action="view2" /></p>
+        <p><h:commandButton value="Return to calling flow" action="returnFromB" /></p>        
+    </h:form>
+    </body>
+</html>

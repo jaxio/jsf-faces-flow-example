@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html 
+xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:j="http://java.sun.com/jsf/flow">    
+    <f:metadata>
+        <j:faces-flow-definition>
+            <j:flow-return id="returnFromB">                
+                <j:navigation-case>
+                    <j:from-outcome>outcomeFromB</j:from-outcome>                    
+                </j:navigation-case>
+				<j:outbound-parameter>
+				    <!-- How to get this returned parameter? -->
+				    <j:name>resultFromFlowB</j:name>
+				    <j:value>Value of resultFromFlowB</j:value>
+				  </j:outbound-parameter>             
+            </j:flow-return>
+
+            <j:inbound-parameter>
+                <j:name>param1</j:name>
+                <j:value>#{flowScope.param1Value}</j:value>
+            </j:inbound-parameter>
+            <j:inbound-parameter>
+                <j:name>param2</j:name>
+                <j:value>#{flowScope.param2Value}</j:value>
+            </j:inbound-parameter>                        
+        </j:faces-flow-definition>
+    </f:metadata>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is not required if you don't need any extra configuration. -->
+<faces-config version="2.2" xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+        http://java.sun.com/xml/ns/javaee https://svn.java.net/svn/mojarra~svn/trunk/jsf-api/doc/web-facesconfig_2_2.xsd">
+
+	<navigation-rule>
+		<!--  does not work properly as we loose the flow_a flowScope -->
+		<navigation-case>
+			<from-outcome>outcomeFromB</from-outcome>
+			<to-view-id>/flow_a/view3.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<faces-flow-definition>
+	</faces-flow-definition>
+</faces-config>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <head>
+        <title>Second page in flow_a</title>
+    </head>
+    <body>
+    <h:form>
+        <h2>Second page in flow_a</h2>
+        <p>Flow bean message: #{beanForFlowA.helloMessage}</p>
+        <p>Has a flow: #{null != facesContext.application.flowHandler.currentFlow}.</p>        
+        <p>current flow id: #{facesContext.application.flowHandler.currentFlow.id}.</p>
+                
+        <p>Set value in flowScope: <h:inputText id="input" value="#{flowScope.value}" /></p>        
+        <p><h:commandButton value="next" action="view3" /></p>        
+        <p><h:commandButton value="back" action="view1" /></p>
+    </h:form>
+    </body>
+</html>

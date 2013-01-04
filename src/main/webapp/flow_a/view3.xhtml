@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Last page in flow_a</title>
+    </head>
+    <body>
+        <h2>Last page in flow_a</h2>
+        <p>Flow bean message: #{beanForFlowA.helloMessage}</p>
+        <p>Has a flow: #{null != facesContext.application.flowHandler.currentFlow}.</p>        
+        <p>current flow id: #{facesContext.application.flowHandler.currentFlow.id}.</p>
+
+        <p>value in flowScope: #{flowScope.value}</p>
+    <h:form>
+        <p>param1 to pass to flow_b: <h:inputText value="#{beanForFlowA.param1}" /></p>
+        <p>param2 to pass to flow_b: <h:inputText value="#{beanForFlowA.param2}" /></p>        
+        <p><h:commandButton value="Call flow_b" action="callB"/></p>
+        <p><h:commandButton value="back" action="view2" /></p>
+        <hr/>
+        <p><h:commandButton value="exit" action="exit" /></p>
+    </h:form>
+    </body>
+</html>
